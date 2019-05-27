@@ -98,7 +98,6 @@ np.add(a, 1, out=a)
 print(a)
 print(b)
 
-###############################################################
 # All the Tensors on the CPU except a CharTensor support converting to
 # NumPy and back.
 #
