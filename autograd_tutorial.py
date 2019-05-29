@@ -34,6 +34,12 @@ print(a.requires_grad)
 b = (a * a).sum()
 print(b.grad_fn)
 
+x = torch.tensor([[1., 2.], [3., 4.]], requires_grad = True)
+y = x * x
+z = y.mean()
+
+z.backward()
+print(x.grad)
 
 # Now let's take a look at an example of vector-Jacobian product:
 x = torch.randn(3, requires_grad=True)
