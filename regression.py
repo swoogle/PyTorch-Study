@@ -37,6 +37,10 @@ class Net(nn.Module):
 
 # define the network
 net = Net(n_feature=1, n_hidden=10, n_output=1)
+# another method define the network 
+# net = nn.Sequential(nn.Linear(1, 10), nn.ReLU(), nn.Linear(10, 1))
+print(net)
+
 
 optimizer = torch.optim.SGD(net.parameters(), lr=0.2)
 # this is for regression mean squared loss
