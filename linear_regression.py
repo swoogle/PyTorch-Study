@@ -1,9 +1,11 @@
 #! /usr/bin/env python3
 #! _*_ coding: utf-8 _*_
 
+import sys
 import torch
 import torch.nn as nn
 import numpy as np
+import os.path as op
 import matplotlib.pyplot as plt
 
 
@@ -57,4 +59,4 @@ plt.legend()
 plt.show()
 
 # Save the model checkpoint
-#torch.save(model.state_dict(), 'linear.ckpt')
+torch.save(model.state_dict(), op.join(sys.path[0], 'model/linear.pt'))
