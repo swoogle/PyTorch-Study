@@ -24,9 +24,8 @@ torch_dataset = Data.TensorDataset(x, y)
 loader = Data.DataLoader(dataset=torch_dataset,
                          batch_size=BATCH_SIZE, shuffle=True, num_workers=2)
 
+
 # default network
-
-
 class Net(torch.nn.Module):
     def __init__(self):
         super(Net, self).__init__()
