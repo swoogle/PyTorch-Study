@@ -58,9 +58,8 @@ def train(model, device, train_loader, criterion, optimizer, epoch_num):
                 print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
                       .format(epoch+1, epoch_num, i+1, total_step, loss.item()))
 
+
 # Test the model
-
-
 def test(model, device, test_loader):
     model.eval()
     with torch.no_grad():
