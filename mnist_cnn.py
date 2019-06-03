@@ -119,7 +119,7 @@ def main():
     test(model, device, test_loader)
 
    # Save the model
-    torch.save(model, op.join(sys.path[0], 'model/minist_cnn.pt'))
+    torch.save(model, op.join(sys.path[0], 'model/mnist_cnn.pt'))
 
 
 if __name__ == '__main__':
