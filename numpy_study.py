@@ -122,3 +122,65 @@ B = np.array([[5, 6, 7], [8, 9, 10]])
 nd18 = np.dot(A, B)
 print("---- nd18 ----")
 print(nd18)
+
+nd19 = np.arange(10)
+print("---- nd19 ----")
+print(nd19)
+print(nd19.reshape(2, 5))
+print(nd19.reshape(5, -1))
+print(nd19.reshape(-1, 5))
+nd19.resize(2, 5)
+print(nd19)
+# 向量转置
+print(nd19.T)
+# 向量展平，行优先
+print(nd19.ravel('F'))
+# 向量展平，列优先
+print(nd19.ravel())
+# 矩阵转换为向量
+print(nd19)
+print(nd19.flatten())
+
+nd20 = np.arange(6).reshape(3, 1, 2, 1)
+print("---- nd20 ----")
+print(nd20)
+# 矩阵降维，把矩阵中含1的维度去掉
+print(nd20.squeeze())
+
+nd21 = np.arange(24).reshape(2, 3, 4)
+print("---- nd21 ----")
+print(nd21)
+print(nd21.transpose(1, 2, 0))
+
+# 矩阵合并
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+nd22 = np.append(a, b)
+print("---- nd22 ----")
+print(nd22)
+
+a = np.arange(4).reshape(2, 2)
+b = np.arange(4).reshape(2, 2)
+nd23 = np.append(a, b, axis=0)
+print("---- nd23 ----")
+print(nd23)
+nd23 = np.append(a, b, axis=1)
+print(nd23)
+
+# 沿指定轴连接矩阵
+a = np.array([[1, 2], [3, 4]])
+b = np.array([[5, 6]])
+nd24 = np.concatenate((a, b), axis=0)
+print("---- nd24 ----")
+print(nd24)
+nd24 = np.concatenate((a, b.T), axis=1)
+print(nd24)
+
+# 沿指定轴堆叠矩阵
+a = np.array([[1, 2], [3, 4]])
+b = np.array([[5, 6], [7, 8]])
+nd25 = np.stack((a, b), axis=0)
+print("---- nd25 ----")
+print(nd25)
+nd25 = np.stack((a, b), axis=1)
+print(nd25)
