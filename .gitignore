@@ -6,6 +6,7 @@ __pycache__/
 # Ignore data and model directory
 data/
 model/
+logs/
 
 # C extensions
 *.so
