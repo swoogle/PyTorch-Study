@@ -35,8 +35,6 @@ class ConvNet(nn.Module):
         return x
 
 # Train the model
-
-
 def train(model, device, train_loader, criterion, optimizer, epoch_num):
     timestart = time.time()
 
